@@ -115,7 +115,7 @@ body {
     overflow-y: auto;
 }
 
-/* Heafing Image Section */
+/* Heading Image Section */
 .heading-image {
     background: linear-gradient(rgba(35, 66, 0, 0.8), rgba(35, 66, 0, 0.7)), url('images/Feministas.png');
     background-size: cover;
