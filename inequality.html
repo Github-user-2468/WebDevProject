@@ -29,11 +29,11 @@
 
     <div class="container">
 
-        <div class="side-menu">
+        <div class="side-menu" id="sidebar">
             <ul>
-                <li><a href="home.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-history"></i> History</a></li>
-                <li><a href="legal-reforms.html"><i class="fas fa-balance-scale"></i> Legal Reforms</a></li>
+                <li><a href="#"><i class="fas fa-balance-scale"></i> Legal Reforms</a></li>
                 <li><a href="#"><i class="fas fa-venus"></i> Topics of Inequality</a></li>
                 <li><a href="#"><i class="fas fa-heart"></i> Survivor Stories</a></li>
                 <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Trafficking</a></li>
@@ -46,11 +46,12 @@
         <div class="content">
 
 
-            <section class="heading-image" 
-                style="background-image: linear-gradient(rgba(35,66,0,0.8), rgba(35,66,0,0.7)), url('images/inequality-hero.jpg');">
-                <h1>Inequality of Women in Brazil</h1>
-                <p>Understanding the unequal economic, social, and political conditions that contribute to the vulnerability of women and girls across Brazil.</p>
-            </section>
+<section class="heading-image" 
+    style="background-image: linear-gradient(rgba(35,66,0,0.8), rgba(35,66,0,0.7)), url('images/inequality.webp');">
+    <h1>Inequality of Women in Brazil</h1>
+    <p>Understanding the unequal economic, social, and political conditions that contribute to the vulnerability of women and girls across Brazil.</p>
+</section>
+
 
 
             <section class="mission-section">
@@ -180,7 +181,7 @@
     </div>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>About Voz Livre</h3>
@@ -202,5 +203,39 @@
         </div>
     </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const footer = document.getElementById("footer");
+
+    function updateSidebarPosition() {
+        const sidebarHeight = sidebar.offsetHeight;
+        const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // The bottom position of the sidebar if it's fixed
+        const sidebarBottom = scrollY + sidebarHeight;
+
+        // If the sidebar would overlap the footer, pin it above the footer
+        if (sidebarBottom >= footerTop) {
+            sidebar.style.position = "absolute";
+            sidebar.style.top = (footerTop - sidebarHeight) + "px";
+        } else {
+            // Otherwise keep it fixed while scrolling
+            sidebar.style.position = "fixed";
+            sidebar.style.top = "70px"; // height of your navbar
+        }
+    }
+
+    // Run on load and scroll
+    window.addEventListener("scroll", updateSidebarPosition);
+    window.addEventListener("resize", updateSidebarPosition);
+    updateSidebarPosition();
+});
+</script>
+
+
 </body>
 </html>
+
