@@ -305,9 +305,7 @@ body {
     background-position: center;
     }
 
-    /* ===== Your Additions / Overrides ===== */
-
-/* Match your green theme for mobile toggle */
+/* Match green theme for mobile toggle */
 .sidebar-toggle {
     background-color: #234200; /* dark green */
     color: #ffffff; /* white icon/text */
@@ -332,7 +330,7 @@ body {
     background-color: #234200; /* highlight hover in your green */
 }
 
-/* ===== Mobile Sidebar Styling ===== */
+/* Mobile Sidebar Styling */
 #mobileSidebar {
     background-color: #ffffff; /* like desktop sidebar */
     color: #6c757d; /* default link color */
@@ -366,6 +364,4 @@ body {
     .content {
         margin-left: 0; /* removes desktop sidebar margin */
     }
-}
-
 }
