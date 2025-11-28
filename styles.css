@@ -304,4 +304,68 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     }
+
+    /* ===== Your Additions / Overrides ===== */
+
+/* Match your green theme for mobile toggle */
+.sidebar-toggle {
+    background-color: #234200; /* dark green */
+    color: #ffffff; /* white icon/text */
+    border: none;
+}
+
+.sidebar-toggle:hover {
+    background-color: #1c3300; /* slightly darker green on hover */
+}
+
+/* Sidebar menu background when collapsed */
+#sidebar.collapse {
+    background-color: #ffffff; /* keep desktop look */
+}
+
+#sidebar a {
+    color: #234200; /* green text */
+}
+
+#sidebar a:hover, #sidebar a.active {
+    color: #ffffff;
+    background-color: #234200; /* highlight hover in your green */
+}
+
+/* ===== Mobile Sidebar Styling ===== */
+#mobileSidebar {
+    background-color: #ffffff; /* like desktop sidebar */
+    color: #6c757d; /* default link color */
+    width: 250px; /* match desktop sidebar width */
+    position: absolute;
+    top: 70px; /* below navbar */
+    left: 0;
+    z-index: 1050;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+/* Nav links styling */
+#mobileSidebar .nav-link {
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#mobileSidebar .nav-link:hover,
+#mobileSidebar .nav-link.active {
+    color: #ffffff;
+    background-color: #234200;
+}
+
+/* Remove empty space on mobile */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0; /* removes desktop sidebar margin */
+    }
+}
+
 }
