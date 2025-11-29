@@ -337,15 +337,20 @@ body {
 
 /* Mobile Sidebar Styling */
 #mobileSidebar {
-    background-color: #ffffff; /* like desktop sidebar */
-    color: #6c757d; /* default link color */
-    width: 250px; /* match desktop sidebar width */
+    background-color: #ffffff;
+    color: #6c757d;
     position: absolute;
-    top: 70px; /* below navbar */
+    top: 70px; 
     left: 0;
     z-index: 1050;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
+    width: 0;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+}
+#mobileSidebar.show {
+    width: 250px;
 }
 
 /* Nav links styling */
