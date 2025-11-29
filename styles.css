@@ -156,14 +156,12 @@ body {
     background: linear-gradient(rgba(35, 66, 0, 0.8), rgba(35, 66, 0, 0.7)), url('images/hands_rose.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: #ffffff;
     padding: 60px 40px;
     border-radius: 10px;
     margin-bottom: 40px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 30%;
 }
 /* Stats Section */
 .stats-section {
@@ -349,12 +347,129 @@ body {
     background-color: #ffffff; /* keep desktop look */
 }
 
-#sidebar a {
-    color: #234200; /* green text */
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
-#sidebar a:hover, #sidebar a.active {
-    color: #ffffff;
-    background-color: #234200; /* highlight hover in your green */
+.resource-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #234200;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
+.resource-text {
+    color: #6c757d;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-item i {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #4a7c59;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+    min-width: 0; 
+}
+
+
+.resource-contact .resource-contact {
+    background: transparent;
+    padding: 0;
+    margin: 10px 0;
+    border: none;
+    box-shadow: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .resource-title {
+        font-size: 1.3rem;
+    }
+    
+    .resource-text {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 15px;
+    }
+    
+    .contact-item span {
+        font-size: 0.9rem;
+    }
+    
+   
+    .contact-item span {
+        word-break: break-word;
+        hyphens: auto;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .card {
+        padding: 15px 12px;
+    }
+    
+    .resource-title {
+        font-size: 1.2rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-item i {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    
+    .contact-item span {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+
+.contact-item div p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
