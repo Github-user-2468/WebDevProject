@@ -38,7 +38,7 @@
 
     <div class="container">
 <!--Desktop sidebar-->
-        <div class="side-menu d-none d-md-block" id="sidebar">
+        <div class="side-menu d-none d-md-block">
             <ul>
                 <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-history"></i> History</a></li>
@@ -217,33 +217,32 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const footer = document.getElementById("footer");
+    const sidebar = document.querySelector('.side-menu');
+    const footer = document.getElementById('footer');
+    const headerHeight = 70; // your header height
 
-    function updateSidebarPosition() {
+    function preventFooterOverlap() {
+        if (!sidebar || !footer) return;
+
         const sidebarHeight = sidebar.offsetHeight;
         const footerTop = footer.getBoundingClientRect().top + window.scrollY;
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
+        const sidebarBottomWhenFixed = window.scrollY + headerHeight + sidebarHeight;
 
-        // The bottom position of the sidebar if it's fixed
-        const sidebarBottom = scrollY + sidebarHeight;
-
-        // If the sidebar would overlap the footer, pin it above the footer
-        if (sidebarBottom >= footerTop) {
-            sidebar.style.position = "absolute";
-            sidebar.style.top = (footerTop - sidebarHeight) + "px";
+        if (sidebarBottomWhenFixed > footerTop) {
+            // Switch to absolute positioning just before it hits the footer
+            sidebar.style.position = 'absolute';
+            sidebar.style.top = (footerTop - sidebarHeight) + 'px';
         } else {
-            // Otherwise keep it fixed while scrolling
-            sidebar.style.position = "fixed";
-            sidebar.style.top = "70px"; // height of your navbar
+            // Normal fixed behavior
+            sidebar.style.position = 'fixed';
+            sidebar.style.top = headerHeight + 'px';
         }
     }
 
-    // Run on load and scroll
-    window.addEventListener("scroll", updateSidebarPosition);
-    window.addEventListener("resize", updateSidebarPosition);
-    updateSidebarPosition();
+    // Run on scroll, resize, and load
+    window.addEventListener('scroll', preventFooterOverlap);
+    window.addEventListener('resize', preventFooterOverlap);
+    preventFooterOverlap();
 });
 </script>
     <!-- Mobile sidebar (collapsible) -->
