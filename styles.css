@@ -473,3 +473,166 @@ body {
     overflow-wrap: break-word;
     line-height: 1.5;
 }
+
+/* How we can help page styling */ 
+.help-header-image {
+    background: linear-gradient(rgba(35, 66, 0, 0.8), rgba(35, 66, 0, 0.7)), url('images/women_with_banner.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 80px 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.action-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+    gap: 10px;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-card i {
+    font-size: 3rem;
+    color: #234200;
+    margin-bottom: 20px;
+}
+
+.action-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #234200;
+    margin-bottom: 15px;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #234200;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.donation-option {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #234200;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+     gap: 10px;
+}
+
+.donation-option:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.donation-header {
+    margin-bottom: 15px;
+}
+
+.donation-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #234200;
+    display: block;
+    line-height: 1.4;
+}
+
+.information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.information p {
+
+    margin-bottom: 15px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+
+.resource-link {
+    margin: 0;
+    text-align: right;
+    margin-top: auto;
+}
+
+.resource-link a {
+    background: #234200;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.resource-link a:hover {
+    background: #1c3300;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .donation-option {
+        padding: 20px;
+    }
+    
+    .org-name {
+        font-size: 1.2rem;
+    }
+    
+    .resource-link {
+        text-align: center;
+    }
+    
+    .resource-link a {
+        width: 100%;
+        text-align: center;
+    }
+}
+.resource-section .col-md-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 8%;
+}
