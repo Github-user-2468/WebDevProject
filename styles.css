@@ -636,3 +636,29 @@ body {
     padding-right: 10px;
     margin-bottom: 8%;
 }
+
+/*Survivor Stories Page Styling*/
+.stories-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.stories-btn {
+    background: #234200;
+    border: none;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.stories-btn:hover {
+    background: #1c3300;
+}
+
+.modal-title {
+    color: #234200;
+}
