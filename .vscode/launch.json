@@ -8,7 +8,7 @@
             "name": "Launch Chrome",
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceFolder}/home.html",
+            "file": "${workspaceFolder}/index.html",
             "runtimeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
             "webRoot": "${workspaceFolder}"
         }
